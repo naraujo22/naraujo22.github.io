@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  header {
+    background-image: url(naim.jpeg);
+    background-size: 100%;
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    height: 275px;
+  }
+  image{
+    width: 50%;
+  }
+  img{
+    width: 100%;
+    height: 70%;
+    float: right;
+  }
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    /* float: left;
+    width: 30%; */
+    /*height: 300px;  only for demonstration, should be removed */
+    background: #bac5e1;
+    padding: 1vw;
+  }
+  
+  /* Style the list inside the menu */
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #555;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #555;
+    text-align: center;
+    border:  1px solid black;
+    display: flex; /* H */
+  }
+  nav li{
+    border: 1px solid black;
+    padding: 8px;
+    /* width: 20%; */
+  }
+  nav ul li{
+    text-align: center;
+    width: 20%;
+    border: 1px solid #555;
+  }
+  li a{
+    display: block;
+    text-decoration: none;
+    color: blue;
+    text-align: center;
+  }
+  .active{
+    background-color: black;
+  }
+  .active a{
+    color: white;
+  }
+  article {
+    /* float: left; */
+    /* width: 70%; */
+    padding: 20px;
+    background-color: #f1f1f1;
+    /*height: 300px; only for demonstration, should be removed */
+  }
+  li{
+    display: inline;
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  section{
+    /* display: flex; */
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+ /*  a:hover{
+    display: block;
+    padding: auto;
+    background-color: #dddddd;
+  } */
+  li:hover{
+    background-color: black;
+    color: white;
+  }
+  a:hover{
+    color: white;
+  }
+  .column{
+    width: 33%;
+    margin: 0.5%;
+  }
+  .imatge{
+    width: 33%;
+  }
+  .segona_columna{
+    width: 32%;
+    margin: 0.5%;
+  }
+  .imatge2{
+    width: 33%;
+    margin: 0.5%;
+  }
+  .imatge3{
+    width: 33%;
+    margin: 0.5%;
+  }
+  .imatge4{
+    width: 33%;
+    margin: 0.5%;
+  }
+  div{
+    float: left;
+    display: block;
+  }
+
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media screen and (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+    header{
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+    }
+  }
