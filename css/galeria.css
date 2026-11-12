@@ -8,18 +8,20 @@
   margin-bottom: 10px;
 }
 
-/* Reparte las imágenes en una cuadrícula */
+/* Reparte las imágenes en columnas que se ajustan al espacio disponible. */
 .gallery-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
 }
 
 /* Estilo de cada fotografía y su pie */
 figure.gallery {
   background: white;
   border: 1px solid #ccc;
+  flex: 1 1 calc(33.333% - 14px);
   margin: 0;
+  min-width: 0;
   overflow: hidden;
 }
 
@@ -31,7 +33,13 @@ figure.gallery img {
   aspect-ratio: 4 / 3;
   display: block;
   object-fit: cover;
+  transition: transform 220ms ease;
   width: 100%;
+}
+
+figure.gallery:hover img,
+figure.gallery:focus-within img {
+  transform: scale(1.05);
 }
 
 figure.gallery figcaption {
@@ -49,15 +57,21 @@ figure.gallery figcaption span {
   padding-top: 4px;
 }
 
-/* Reduce el número de columnas en pantallas medianas y móviles */
+/* Reduce el ancho de las columnas en pantallas medianas y móviles. */
 @media screen and (max-width: 800px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+  figure.gallery {
+    flex-basis: calc(50% - 10px);
   }
 }
 
 @media screen and (max-width: 520px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
+  figure.gallery {
+    flex-basis: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  figure.gallery img {
+    transition: none;
   }
 }

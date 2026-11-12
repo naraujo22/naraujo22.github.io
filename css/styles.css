@@ -28,7 +28,7 @@ body {
 }
 
 .header-content h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2.2rem, 7vw, 3.5rem);
   line-height: 1.1;
   margin: 8px 0 14px;
 }
@@ -89,19 +89,75 @@ article {
 
 .intro {
   align-items: center;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 35px;
-  grid-template-columns: 1fr 1fr;
+}
+
+.text-column,
+.feature-image {
+  flex: 1 1 calc(50% - 18px);
+  min-width: 0;
+}
+
+.text-column {
+  min-width: min(100%, 300px);
 }
 
 .text-column h2,
 .gallery-heading h2,
+.planet-data h2,
 .fact-card h2,
 .thank-you h2 {
   color: #182746;
   font-size: 2rem;
   line-height: 1.2;
   margin: 8px 0 18px;
+}
+
+.planet-data {
+  margin-top: 40px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  min-width: 560px;
+  width: 100%;
+}
+
+caption {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+th,
+td {
+  border: 1px solid #d2ced8;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+thead {
+  background: #182746;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background: #e8e0ef;
+}
+
+tbody tr:hover {
+  background: #d7c8e5;
+}
+
+tbody th {
+  font-weight: bold;
 }
 
 .text-column p:not(.eyebrow) {
@@ -165,21 +221,22 @@ figcaption {
 }
 
 .form-article form {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 18px;
-  grid-template-columns: 1fr 1fr; /* Coloca las preguntas en dos columnas. */
 }
 
 form fieldset {
   background: white;
   border: 1px solid #bbb;
+  flex: 1 1 calc(50% - 9px);
   margin: 0;
   min-width: 0;
   padding: 22px;
 }
 
 form fieldset:last-of-type {
-  grid-column: 1 / -1; /* El comentario ocupa las dos columnas. */
+  flex-basis: 100%;
 }
 
 form legend {
@@ -205,7 +262,27 @@ input[type="radio"] {
   accent-color: #7542a5;
 }
 
+.form-article input:focus-visible,
+.form-article select:focus-visible,
+.form-article textarea:focus-visible,
+.table-wrapper:focus-visible {
+  outline: 3px solid #7542a5;
+  outline-offset: 2px;
+}
+
 select {
+  background: white;
+  border: 1px solid #aaa;
+  display: block;
+  font: inherit;
+  margin-top: 8px;
+  max-width: 100%;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-article input[type="text"],
+.form-article input[type="email"] {
   background: white;
   border: 1px solid #aaa;
   display: block;
@@ -227,7 +304,7 @@ textarea {
 }
 
 .form-article button {
-  justify-self: start;
+  align-self: flex-start;
 }
 
 button {
@@ -265,6 +342,7 @@ footer {
 @media screen and (max-width: 700px) {
   .site-header {
     min-height: 250px;
+    padding: 35px 20px;
   }
 
   nav {
@@ -290,14 +368,30 @@ footer {
 
   .intro {
     gap: 24px;
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .text-column,
+  .feature-image {
+    flex-basis: auto;
+    width: 100%;
   }
 
   .form-article form {
-    grid-template-columns: 1fr; /* En móviles, las preguntas van una debajo de otra. */
+    flex-direction: column;
   }
 
   form fieldset:last-of-type {
-    grid-column: auto; /* El comentario vuelve a ocupar una sola columna. */
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  form fieldset {
+    width: 100%;
+  }
+
+  .header-content > p:last-child {
+    font-size: 1rem;
   }
 }

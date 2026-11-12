@@ -33,9 +33,19 @@
     <article class="form-article">
       <form action="gracies.html" method="get" name="formulari">
         <fieldset>
+          <legend>Dades de contacte</legend>
+          <label for="nom">Nom:
+            <input id="nom" name="nom" type="text" autocomplete="name" minlength="2" maxlength="60" required>
+          </label>
+          <label for="email">Correu electrònic:
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </label>
+        </fieldset>
+
+        <fieldset>
           <legend>Planeta preferit</legend>
           <p>Quin planeta o cos celeste t'agradaria visitar?</p>
-          <label class="choice"><input type="radio" name="objecte" value="Mart" checked> Mart</label>
+          <label class="choice"><input type="radio" name="objecte" value="Mart" checked required> Mart</label>
           <label class="choice"><input type="radio" name="objecte" value="Saturn"> Saturn</label>
           <label class="choice"><input type="radio" name="objecte" value="Júpiter"> Júpiter</label>
           <label class="choice"><input type="radio" name="objecte" value="La Lluna"> La Lluna</label>
@@ -68,7 +78,7 @@
         <fieldset>
           <legend>Vols afegir alguna cosa?</legend>
           <label for="comentari">Escriu aquí què t'agradaria saber sobre l'espai:</label>
-          <textarea id="comentari" name="comentari" rows="4" placeholder="La teva resposta..."></textarea>
+          <textarea id="comentari" name="comentari" rows="4" minlength="10" maxlength="500" placeholder="La teva resposta..." required></textarea>
         </fieldset>
 
         <button type="submit">Enviar opinió</button>
