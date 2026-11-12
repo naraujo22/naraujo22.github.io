@@ -37,6 +37,7 @@ figure.gallery img {
   width: 100%;
 }
 
+/* Amplía la imagen al pasar el cursor o al enfocar su enlace con el teclado. */
 figure.gallery:hover img,
 figure.gallery:focus-within img {
   transform: scale(1.05);

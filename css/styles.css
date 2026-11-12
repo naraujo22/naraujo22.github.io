@@ -87,6 +87,7 @@ article {
   padding: 45px 28px;
 }
 
+/* Flexbox mantiene el texto y la imagen en columnas y permite que se adapten al ancho disponible. */
 .intro {
   align-items: center;
   display: flex;
@@ -119,6 +120,7 @@ article {
   margin-top: 40px;
 }
 
+/* En pantallas estrechas, la tabla conserva su ancho y puede desplazarse sin desbordar la página. */
 .table-wrapper {
   overflow-x: auto;
 }
@@ -262,6 +264,7 @@ input[type="radio"] {
   accent-color: #7542a5;
 }
 
+/* Hace visible el foco al navegar con teclado por el formulario y la tabla. */
 .form-article input:focus-visible,
 .form-article select:focus-visible,
 .form-article textarea:focus-visible,
