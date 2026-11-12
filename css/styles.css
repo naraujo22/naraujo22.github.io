@@ -1,157 +1,303 @@
+/* Ajustes generales de toda la página */
 * {
-    box-sizing: border-box;
-    margin: 0;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* Style the header */
-  header {
-    background-image: url(naim.jpeg);
-    background-size: 100%;
-    background-color: #666;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
-    height: 275px;
-  }
-  image{
-    width: 50%;
-  }
-  img{
-    width: 100%;
-    height: 70%;
-    float: right;
-  }
-  /* Create two columns/boxes that floats next to each other */
-  nav {
-    /* float: left;
-    width: 30%; */
-    /*height: 300px;  only for demonstration, should be removed */
-    background: #bac5e1;
-    padding: 1vw;
-  }
-  
-  /* Style the list inside the menu */
-  ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #555;
-  }
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    background-color: #ffffff;
-    border: 1px solid #555;
-    text-align: center;
-    border:  1px solid black;
-    display: flex; /* H */
-  }
-  nav li{
-    border: 1px solid black;
-    padding: 8px;
-    /* width: 20%; */
-  }
-  nav ul li{
-    text-align: center;
-    width: 20%;
-    border: 1px solid #555;
-  }
-  li a{
-    display: block;
-    text-decoration: none;
-    color: blue;
-    text-align: center;
-  }
-  .active{
-    background-color: black;
-  }
-  .active a{
-    color: white;
-  }
-  article {
-    /* float: left; */
-    /* width: 70%; */
-    padding: 20px;
-    background-color: #f1f1f1;
-    /*height: 300px; only for demonstration, should be removed */
-  }
-  li{
-    display: inline;
-  }
-  
-  /* Clear floats after the columns */
-  section::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  section{
-    /* display: flex; */
-  }
-  
-  /* Style the footer */
-  footer {
-    background-color: #777;
-    padding: 10px;
-    text-align: center;
-    color: white;
-  }
- /*  a:hover{
-    display: block;
-    padding: auto;
-    background-color: #dddddd;
-  } */
-  li:hover{
-    background-color: black;
-    color: white;
-  }
-  a:hover{
-    color: white;
-  }
-  .column{
-    width: 33%;
-    margin: 0.5%;
-  }
-  .imatge{
-    width: 33%;
-  }
-  .segona_columna{
-    width: 32%;
-    margin: 0.5%;
-  }
-  .imatge2{
-    width: 33%;
-    margin: 0.5%;
-  }
-  .imatge3{
-    width: 33%;
-    margin: 0.5%;
-  }
-  .imatge4{
-    width: 33%;
-    margin: 0.5%;
-  }
-  div{
-    float: left;
-    display: block;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: #f1f1f1;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+/* Cabecera con la imagen espacial */
+.site-header {
+  background-image: url("../imatges/via-lactia.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  min-height: 300px;
+  padding: 45px 7%;
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  max-width: 760px;
+}
+
+.header-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin: 8px 0 14px;
+}
+
+.header-content > p:last-child {
+  font-size: 1.2rem;
+}
+
+.eyebrow {
+  color: #7542a5;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.site-header .eyebrow {
+  color: #d7b8ed;
+}
+
+/* Barra de navegación y enlaces */
+nav {
+  background: #222;
+  padding: 0 5%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0;
+}
+
+nav li {
+  display: block;
+}
+
+nav a {
+  color: white;
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav .active a {
+  background: #7542a5;
+  color: white;
+}
+
+/* Distribución del contenido */
+article {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 45px 28px;
+}
+
+.intro {
+  align-items: center;
+  display: grid;
+  gap: 35px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.text-column h2,
+.gallery-heading h2,
+.fact-card h2,
+.thank-you h2 {
+  color: #182746;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 8px 0 18px;
+}
+
+.text-column p:not(.eyebrow) {
+  margin: 0 0 16px;
+}
+
+.feature-image {
+  margin: 0;
+}
+
+.feature-image img {
+  aspect-ratio: 4 / 3;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+figcaption {
+  color: #555;
+  font-size: 0.9rem;
+  padding-top: 8px;
+}
+
+.fact-card {
+  background: #e8e0ef;
+  border-left: 5px solid #7542a5;
+  margin-top: 40px;
+  padding: 25px;
+}
+
+.fact-card h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.text-link {
+  color: #61328c;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 12px;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.source-note {
+  color: #555;
+  font-size: 0.85rem;
+  margin-top: 28px;
+}
+
+.source-note a {
+  color: #61328c;
+}
+
+/* Distribución y aspecto del formulario */
+.form-article {
+  max-width: 1100px;
+}
+
+.form-article form {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr 1fr; /* Coloca las preguntas en dos columnas. */
+}
+
+form fieldset {
+  background: white;
+  border: 1px solid #bbb;
+  margin: 0;
+  min-width: 0;
+  padding: 22px;
+}
+
+form fieldset:last-of-type {
+  grid-column: 1 / -1; /* El comentario ocupa las dos columnas. */
+}
+
+form legend {
+  color: #182746;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0 8px;
+}
+
+form fieldset > p,
+form fieldset > label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form .choice {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+input[type="radio"] {
+  accent-color: #7542a5;
+}
+
+select {
+  background: white;
+  border: 1px solid #aaa;
+  display: block;
+  font: inherit;
+  margin-top: 8px;
+  max-width: 100%;
+  padding: 10px;
+  width: 100%;
+}
+
+textarea {
+  border: 1px solid #aaa;
+  display: block;
+  font: inherit;
+  margin-top: 8px;
+  max-width: 100%;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-article button {
+  justify-self: start;
+}
+
+button {
+  background: #7542a5;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  margin: 0 8px 8px 0;
+  padding: 11px 18px;
+}
+
+button:hover {
+  background: #61328c;
+}
+
+button.secondary-button {
+  background: #666;
+}
+
+.thank-you {
+  min-height: 260px;
+}
+
+/* Pie común a todas las páginas */
+footer {
+  background: #222;
+  color: white;
+  padding: 18px;
+  text-align: center;
+}
+
+/* Cambios para que el sitio funcione en pantallas pequeñas */
+@media screen and (max-width: 700px) {
+  .site-header {
+    min-height: 250px;
   }
 
-  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-  @media screen and (max-width: 600px) {
-    nav, article {
-      width: 100%;
-      height: auto;
-    }
-    header{
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 100%;
-    }
+  nav {
+    padding: 0;
   }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav li {
+    flex: 1 1 33.333%;
+    text-align: center;
+  }
+
+  nav a {
+    padding: 12px 8px;
+  }
+
+  article {
+    padding: 35px 20px;
+  }
+
+  .intro {
+    gap: 24px;
+    grid-template-columns: 1fr;
+  }
+
+  .form-article form {
+    grid-template-columns: 1fr; /* En móviles, las preguntas van una debajo de otra. */
+  }
+
+  form fieldset:last-of-type {
+    grid-column: auto; /* El comentario vuelve a ocupar una sola columna. */
+  }
+}

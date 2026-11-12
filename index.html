@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html lang="ca">
-
+<!-- Página principal con una introducción al sistema solar. -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <title>Fortnite</title>
+  <title>El sistema solar</title>
 </head>
-
 <body>
-  <header>
-   
+  <!-- Cabecera común: título y presentación del sitio. -->
+  <header class="site-header">
+    <div class="header-content">
+      <p class="eyebrow">Una mirada a l'espai</p>
+      <h1>El sistema solar</h1>
+      <p>Informació sobre els planetes i les seves llunes</p>
+    </div>
   </header>
 
+  <!-- Menú para moverse entre las distintas páginas. -->
   <section>
-    <nav>
+    <nav aria-label="Navegació principal">
       <ul>
-        <li class="active"><a  href="index.html">Capitol 1: Temporada 3-4</a></li>
-        <li><a href="temporada5.html">Temporada 5</a></li>
-        <li><a href="temporada6.html">Temporada 6</a></li>
-        <li><a href="opinions.html">Opinions</a></li>
-        <li><a  href="galeria.html">Galeria</a></li>
+        <li class="active"><a href="index.html">Inici</a></li>
+        <li><a href="temporada5.html">Mart</a></li>
+        <li><a href="temporada6.html">Saturn</a></li>
+        <li><a href="opinions.html">Opina</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
       </ul>
     </nav>
 
+    <!-- Información inicial y fotografía de los planetas interiores. -->
     <article>
-      <div class="column">
-        <h1>Temp. 3-4</h1>
-        <p>Un gran meteorit blau apareix al cel. A mesura que s'acosta, la gent de l'Illa comença a preocupar-se per on
-          aterrarà. Ciutadans de Tilted Towers dibuixen cartells que prediuen un desastre.<br>
+      <div class="intro">
+        <div class="text-column">
+          <p class="eyebrow">El nostre sistema solar</p>
+          <h2>El Sol i els planetes</h2>
+          <p>El sistema solar es va formar fa uns 4.600 milions d'anys. Al centre hi ha el Sol, i al seu voltant giren vuit planetes, les seves llunes i altres cossos celestes.</p>
+          <p>Els quatre planetes més propers al Sol són rocosos. Els quatre més llunyans són gegants i estan formats principalment per gas o gel. La Terra, Mart i Saturn són alguns dels planetes que formen part d'aquest sistema.</p>
+        </div>
+        <figure class="feature-image">
+          <img src="imatges/sistema-solar.jpg" alt="Vista dels planetes interiors del sistema solar">
+          <figcaption>Una imatge d'un dels planetes del sistema solar.</figcaption>
+        </figure>
+      </div>
 
-          El meteorit es trenca en diversos trossos fins al seu gran accident a Dusty Depot, ara Dusty Divot, i les
-          seves altres peces aterren a un altre lloc, incloses les Tilted Towers.
-        </p> <br>
+      <!-- Dato curioso y enlaces a las fuentes consultadas. -->
+      <div class="fact-card">
+        <h2>Una dada curiosa</h2>
+        <p>El Sol conté gairebé tota la massa del sistema solar. Per això, tot i que els planetes són molt grans, junts pesen molt menys que el Sol.</p>
+        <a class="text-link" href="galeria.html">Mira les imatges de la galeria &rarr;</a>
       </div>
-      <div class="imatge">
-        <img src="imatges/mataorit.jpg" alt="meteorit">
-      </div>
-      <div class="segona_columna">
-        <br> Poc després del seu aterratge, es construeix un laboratori d'anàlisi per amagar el meteor dels ulls del
-        públic, construït per aquells que miren l'illa des de sota, a l'ombra. La seva presència a l'illa va ser
-        insinuada per quatre búnquers tancats col·locats a les seves quatre cantonades des del principi. <br> Petits fragments del
-        meteor s'infonen amb antigravetat i es converteixen en Hop Rocks. <br>
-      </div>
+      <p class="source-note">Més informació: <a href="https://science.nasa.gov/solar-system/" target="_blank" rel="noopener">el sistema solar a la NASA</a>.</p>
     </article>
   </section>
 
+  <!-- Pie de página compartido por el sitio. -->
   <footer>
-    <p>by Naïm</p>
+    <p>Fet per Naïm</p>
   </footer>
 </body>
-
 </html>

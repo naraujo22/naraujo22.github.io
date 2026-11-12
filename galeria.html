@@ -1,74 +1,87 @@
 <!DOCTYPE html>
 <html lang="ca">
-
+<!-- Página con una colección de imágenes espaciales. -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/galeria.css">
-    <title>Fortnite</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/galeria.css">
+  <title>Galeria | El sistema solar</title>
 </head>
-
 <body>
-    <header>
+  <!-- Cabecera de la galería. -->
+  <header class="site-header">
+    <div class="header-content">
+      <p class="eyebrow">Imatges de l'espai</p>
+      <h1>Galeria</h1>
+      <p>Fotografies de planetes, missions i galàxies</p>
+    </div>
+  </header>
 
-    </header>
+  <!-- Menú para moverse entre las distintas páginas. -->
+  <section>
+    <nav aria-label="Navegació principal">
+      <ul>
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="temporada5.html">Mart</a></li>
+        <li><a href="temporada6.html">Saturn</a></li>
+        <li><a href="opinions.html">Opina</a></li>
+        <li class="active"><a href="galeria.html">Galeria</a></li>
+      </ul>
+    </nav>
 
-    <section>
-        <nav>
-            <ul>
-              <li ><a  href="index.html">Capitol 1: Temporada 3-4</a></li>
-              <li><a href="temporada5.html">Temporada 5</a></li>
-              <li><a href="temporada6.html">Temporada 6</a></li>
-              <li><a href="opinions.html">Opinions</a></li>
-              <li class="active"><a  href="galeria.html">Galeria</a></li>
-            </ul>
-        </nav>
-        <article>
-            <h1>Skins mes usades</h1>
-            <div class="gallery">
-                <a target="_blank" href="imatges/selene.jpg">
-                  <img src="imatges/selene.jpg" alt="Selene" width="60%" height="40%">
-                </a>
-                <div class="desc">Selene-11,50%
-                </div>
-              </div>
-              <div class="gallery">
-                <a target="_blank" href="imatges/punkromado.png">
-                  <img src="imatges/punkromado.png" alt="Punkromado" width="60%" height="40%">
-                </a>
-                <div class="desc">Punkromado-3,48%</div>
-              </div>
-              <div class="gallery">
-                <a target="_blank" href="imatges/spider_gwen .png">
-                  <img src="imatges/spider_gwen .png" alt="Spider-Gwen" width="60%" height="40%">
-                </a>
-                <div class="desc">Gwen-2,90%</div>
-              </div>
-              <div class="gallery">
-                <a target="_blank" href="imatges/joni_escarlata.png">
-                  <img src="imatges/joni_escarlata.png" alt="Joni escarlata" width="60%" height="40%">
-                </a>
-                <div class="desc">Joni-1,43%</div>
-              </div>
-              <div class="gallery">
-                <a target="_blank" href="imatges/operaciones_especiales_ponche.png">
-                  <img src="imatges/operaciones_especiales_ponche.png" alt="Ponche" width="60%" height="40%">
-                </a>
-                <div class="desc">Ponche-1,18%</div>
-              </div>
-              <div class="gallery">
-                <a target="_blank" href="imatges/aura.png">
-                  <img src="imatges/aura.png" alt="Aura" width="60%" height="40%">
-                </a>
-                <div class="desc">Aura-1,07%</div>
-              </div>
-        </article>
-    </section>
+    <!-- Presentación y cuadrícula de fotografías de la NASA. -->
+    <article>
+      <div class="gallery-heading">
+        <p class="eyebrow">Arxiu d'imatges de la NASA</p>
+        <h2>Alguns exemples</h2>
+        <p>A la galeria hi ha imatges de planetes, missions espacials i galàxies. Pots seleccionar una fotografia per consultar-ne la fitxa original.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery">
+          <a href="https://images.nasa.gov/details/PIA12365" target="_blank" rel="noopener">
+            <img src="imatges/sistema-solar.jpg" alt="Vista dels planetes interiors del sistema solar">
+          </a>
+          <figcaption>Un planeta interior <span>Imatge d'un dels planetes més propers al Sol.</span></figcaption>
+        </figure>
+        <figure class="gallery">
+          <a href="https://images.nasa.gov/details/PIA07081" target="_blank" rel="noopener">
+            <img src="imatges/rover-mart.jpg" alt="Un rover de la NASA estudiant el sòl de Mart">
+          </a>
+          <figcaption>Un rover a Mart <span>Un vehicle d'exploració sobre la superfície marciana.</span></figcaption>
+        </figure>
+        <figure class="gallery">
+          <a href="https://images.nasa.gov/details/PIA02241" target="_blank" rel="noopener">
+            <img src="imatges/anells-saturn.jpg" alt="Els anells de Saturn vistos des de l'espai">
+          </a>
+          <figcaption>Els anells de Saturn <span>Formats per fragments de gel i roca.</span></figcaption>
+        </figure>
+        <figure class="gallery">
+          <a href="https://images.nasa.gov/details/PIA25726" target="_blank" rel="noopener">
+            <img src="imatges/jupiter-io.jpg" alt="Júpiter i la seva lluna Io">
+          </a>
+          <figcaption>Júpiter i Io <span>El planeta i una de les seves llunes.</span></figcaption>
+        </figure>
+        <figure class="gallery">
+          <a href="https://images.nasa.gov/details/sl4-143-4707" target="_blank" rel="noopener">
+            <img src="imatges/skylab-orbita.jpg" alt="L'estació espacial Skylab en òrbita terrestre">
+          </a>
+          <figcaption>Skylab en òrbita <span>L'estació espacial vista des d'una nau tripulada.</span></figcaption>
+        </figure>
+        <figure class="gallery">
+          <a href="https://images.nasa.gov/details/GSFC_20171208_Archive_e001326" target="_blank" rel="noopener">
+            <img src="imatges/via-lactia.jpg" alt="Representació artística de galàxies semblants a la Via Làctia">
+          </a>
+          <figcaption>Galàxies llunyanes <span>Representació artística de galàxies semblants a la Via Làctia.</span></figcaption>
+        </figure>
+      </div>
+      <p class="source-note">Imatges: <a href="https://images.nasa.gov/" target="_blank" rel="noopener">NASA Image and Video Library</a>. Crèdits individuals a les fitxes de cada imatge.</p>
+    </article>
+  </section>
 
-    <footer>
-        <p>by Naïm</p>
-    </footer>
+  <!-- Pie de página compartido por el sitio. -->
+  <footer>
+    <p>Fet per Naïm</p>
+  </footer>
 </body>
-
 </html>

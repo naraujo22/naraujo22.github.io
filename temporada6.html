@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html lang="ca">
-
+<!-- Página con información sobre Saturno y sus anillos. -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>Fortnite</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>Saturn | El sistema solar</title>
 </head>
-
 <body>
-    <header>
+  <!-- Cabecera con el nombre y una frase sobre el planeta. -->
+  <header class="site-header">
+    <div class="header-content">
+      <p class="eyebrow">El planeta dels anells</p>
+      <h1>Saturn</h1>
+      <p>Un dels planetes més grans del sistema solar</p>
+    </div>
+  </header>
 
-    </header>
+  <!-- Menú para moverse entre las distintas páginas. -->
+  <section>
+    <nav aria-label="Navegació principal">
+      <ul>
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="temporada5.html">Mart</a></li>
+        <li class="active"><a href="temporada6.html">Saturn</a></li>
+        <li><a href="opinions.html">Opina</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+      </ul>
+    </nav>
 
-    <section>
-        <nav>
-            <ul>
-                <li><a  href="index.html">Capitol 1: Temporada 3-4</a></li>
-                <li><a href="temporada5.html">Temporada 5</a></li>
-                <li class="active"><a href="temporada6.html">Temporada 6</a></li>
-                <li><a href="opinions.html">Opinions</a></li>
-                <li><a  href="galeria.html">Galeria</a></li>
-            </ul>
-        </nav>
+    <!-- Información de Saturno junto a una fotografía de sus anillos. -->
+    <article>
+      <div class="intro">
+        <div class="text-column">
+          <p class="eyebrow">Un gegant gasós</p>
+          <h2>Els anells de Saturn</h2>
+          <p>Saturn és el sisè planeta des del Sol i el segon més gran del sistema solar. Està format sobretot per hidrogen i heli, i no té una superfície sòlida com la Terra.</p>
+          <p>Els seus anells estan formats per fragments de gel i roca de diferents mides. Saturn també té moltes llunes. Tità és la més gran i té llacs de metà i età a la superfície.</p>
+        </div>
+        <figure class="feature-image">
+          <img src="imatges/anells-saturn.jpg" alt="Els anells de Saturn vistos des de l'espai">
+          <figcaption>Els anells de Saturn fotografiats per la missió Cassini. Imatge: NASA/JPL.</figcaption>
+        </figure>
+      </div>
 
-        <article>
-            <div class="column">
-                <h1>Temp. 6</h1>
-                <p>El Cub neix del llac Loot, no gotejant d'aigua sinó de l'immens poder que absorbeix. Aleshores es
-                    revela el pla del Cub: conquerir l'illa amb els dimonis que estava generant i obrir un portal perquè
-                    en vinguin més. Després que nosaltres, els Loopers de l'Illa, lluitem contra les hordes, la poderosa
-                    llum del Llac supera la foscor del Cub; fent-lo explotar.
-                </p> <br>
-            </div>
-            <div class="imatge">
-                <img src="imatges/papallona.png" alt="papallona">
-            </div>
-            <div class="segona_columna">
-                <br>Una papallona porta a tothom a l'illa a l'intermedi, els circuits exposats de l'existència, per
-                protegir-nos de la fusió del cub. Mentrestant, a les profunditats del Bosc de les Lamentacions, els que
-                contenien el meteor per a l'anàlisi segueixen vivint sota l'illa. Intenten recrear la llàgrima del
-                Visitant a temps fent quatre túnels, connectats entre si mitjançant portals.
-                <br>
-            </div>
-        </article>
-    </section>
+      <!-- Dato curioso y enlace a la galería. -->
+      <div class="fact-card">
+        <h2>Una dada curiosa</h2>
+        <p>La densitat mitjana de Saturn és inferior a la de l'aigua. Per això es diu que, en teoria, podria surar si existís un oceà prou gran.</p>
+        <a class="text-link" href="galeria.html">Mira més imatges a la galeria &rarr;</a>
+      </div>
+      <p class="source-note">Més informació: <a href="https://science.nasa.gov/saturn/" target="_blank" rel="noopener">Saturn a la NASA</a>.</p>
+    </article>
+  </section>
 
-    <footer>
-        <p>by Naïm</p>
-    </footer>
+  <!-- Pie de página compartido por el sitio. -->
+  <footer>
+    <p>Fet per Naïm</p>
+  </footer>
 </body>
-
 </html>

@@ -1,75 +1,85 @@
 <!DOCTYPE html>
 <html lang="ca">
-
+<!-- Página con el formulario para recoger la opinión del visitante. -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>Fortnite</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>Opina | El sistema solar</title>
 </head>
-
 <body>
-    <header>
+  <!-- Cabecera del formulario. -->
+  <header class="site-header">
+    <div class="header-content">
+      <p class="eyebrow">La teva opinió</p>
+      <h1>Quin món t'intriga més?</h1>
+      <p>Tria el planeta i la missió que més t'interessen</p>
+    </div>
+  </header>
 
-    </header>
+  <!-- Menú para moverse entre las distintas páginas. -->
+  <section>
+    <nav aria-label="Navegació principal">
+      <ul>
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="temporada5.html">Mart</a></li>
+        <li><a href="temporada6.html">Saturn</a></li>
+        <li class="active"><a href="opinions.html">Opina</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+      </ul>
+    </nav>
 
-    <section>
-        <nav>
-            <ul>
-                <li><a  href="index.html">Capitol 1: Temporada 3-4</a></li>
-                <li><a href="temporada5.html">Temporada 5</a></li>
-                <li><a href="temporada6.html">Temporada 6</a></li>
-                <li class="active"><a href="opinions.html">Opinions</a></li>
-                <li><a  href="galeria.html">Galeria</a></li>
-            </ul>
-        </nav>
-        <form action="gracies.html" method="get" name="formulari">
+    <!-- Formulario con opciones de planetas y misiones espaciales. -->
+    <article class="form-article">
+      <form action="gracies.html" method="get" name="formulari">
         <fieldset>
-            <legend>Opinions</legend>
-            <label for="Skin-preferida">Skin preferida entre les més usades.</label><br>
-            <input type="radio" name="Skin-preferida" id="amd" value="amd" checked>Aura<br>
-            <input type="radio" name="Skin-preferida" id="intel" value="intel">Spider-Gwen<br>
-            <input type="radio" name="Skin-preferida" id="intel" value="intel">Selene<br>
-            <input type="radio" name="Skin-preferida" id="intel" value="intel">Punkromado<br>
-            <input type="radio" name="Skin-preferida" id="intel" value="intel">Operaciones Especiales Ponche<br>
-            <input type="radio" name="Skin-preferida" id="intel" value="intel">Joni escarlata<br>
-            <br>
+          <legend>Planeta preferit</legend>
+          <p>Quin planeta o cos celeste t'agradaria visitar?</p>
+          <label class="choice"><input type="radio" name="objecte" value="Mart" checked> Mart</label>
+          <label class="choice"><input type="radio" name="objecte" value="Saturn"> Saturn</label>
+          <label class="choice"><input type="radio" name="objecte" value="Júpiter"> Júpiter</label>
+          <label class="choice"><input type="radio" name="objecte" value="La Lluna"> La Lluna</label>
+        </fieldset>
 
-        </fieldset>
         <fieldset>
-            <legend>Millor Capítol</legend>
-            <select id="Capítol" required>
-                <option value="" selected>- Selecciona -</option>
-                <option value="Cap.1">Capítol 1</option>
-                <option value="Cap.2">Capítol 2</option>
-                <option value="Cap.3">Capítol 3</option>
-                <option value="Cap.4">Capítol 4</option>
-            </select><br><br>
+          <legend>Missió espacial</legend>
+          <label for="missio">Quina missió t'interessa més?</label>
+          <select id="missio" name="missio" required>
+            <option value="" selected disabled>— Selecciona —</option>
+            <option value="Perseverance">Perseverance, a Mart</option>
+            <option value="Cassini">Cassini, a Saturn</option>
+            <option value="Juno">Juno, a Júpiter</option>
+            <option value="Artemis">Artemis, a la Lluna</option>
+          </select>
         </fieldset>
-        <fieldset>
-            <legend>Quina temporada esculls del capítol anterior?</legend>
-            <select id="ram" size="6" required>
-                <option value="" selected>- Selecciona -</option>
-                <option value="Temporada 1">Temporada 1</option>
-                <option value="Temporada 2">Temporada 2</option>
-                <option value="Temporada 2">Temporada 3</option>
-                <option value="Temporada 2">Temporada 4</option>
-                <option value="Temporada 2">Temporada 5</option>
-                <option value="Temporada 2">Temporada 6 (si en té)</option>
-                <option value="Temporada 2">Temporada 7 (si en té)</option>
-                <option value="Temporada 2">Temporada 8 (si en té)</option>
-                <option value="Temporada 2">Temporada 9 (si en té)</option>
-                <option value="Temporada 2">Temporada 10 (si en té)</option>
-            </select><br>
-            <button type="submit" id="submit">Enviar opinions</button>
-            <button type="reset" id="reset">Esborrar opinions</button>
-        </fieldset>
-        </article>
-    </section>
 
-    <footer>
-        <p>by Naïm</p>
-    </footer>
+        <fieldset>
+          <legend>Quin tema t'interessa més?</legend>
+          <label for="tema">Tria un tema per aprendre'n més:</label>
+          <select id="tema" name="tema">
+            <option value="" selected>— Cap en concret —</option>
+            <option value="planetes">Els planetes</option>
+            <option value="llunes">Les llunes</option>
+            <option value="exploracio">L'exploració espacial</option>
+            <option value="estrelles">Les estrelles i les galàxies</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Vols afegir alguna cosa?</legend>
+          <label for="comentari">Escriu aquí què t'agradaria saber sobre l'espai:</label>
+          <textarea id="comentari" name="comentari" rows="4" placeholder="La teva resposta..."></textarea>
+        </fieldset>
+
+        <button type="submit">Enviar opinió</button>
+        <button type="reset" class="secondary-button">Esborrar resposta</button>
+      </form>
+    </article>
+  </section>
+
+  <!-- Pie de página compartido por el sitio. -->
+  <footer>
+    <p>Fet per Naïm</p>
+  </footer>
 </body>
-
 </html>

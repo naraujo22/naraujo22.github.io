@@ -1,52 +1,62 @@
 <!DOCTYPE html>
 <html lang="ca">
-
+<!-- Página con información y una imagen sobre Marte. -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>Fortnite</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>Mart | El sistema solar</title>
 </head>
-
 <body>
-    <header>
+  <!-- Cabecera con el nombre y una frase sobre el planeta. -->
+  <header class="site-header">
+    <div class="header-content">
+      <p class="eyebrow">El planeta vermell</p>
+      <h1>Mart</h1>
+      <p>Un planeta que encara s'estudia amb missions espacials</p>
+    </div>
+  </header>
 
-    </header>
+  <!-- Menú para moverse entre las distintas páginas. -->
+  <section>
+    <nav aria-label="Navegació principal">
+      <ul>
+        <li><a href="index.html">Inici</a></li>
+        <li class="active"><a href="temporada5.html">Mart</a></li>
+        <li><a href="temporada6.html">Saturn</a></li>
+        <li><a href="opinions.html">Opina</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+      </ul>
+    </nav>
 
-    <section>
-        <nav>
-            <ul>
-                <li><a  href="index.html">Capitol 1: Temporada 3-4</a></li>
-                <li class="active"><a href="temporada5.html">Temporada 5</a></li>
-                <li><a href="temporada6.html">Temporada 6</a></li>
-                <li><a href="opinions.html">Opinions</a></li>
-                <li><a  href="galeria.html">Galeria</a></li>
-            </ul>
-        </nav>
+    <!-- Datos de Marte junto a una fotografía de un rover. -->
+    <article>
+      <div class="intro">
+        <div class="text-column">
+          <p class="eyebrow">Característiques del planeta</p>
+          <h2>Per què és de color vermell?</h2>
+          <p>Mart és el quart planeta des del Sol. La seva superfície té pols i roques amb òxid de ferro, que li donen el color vermellós. És més fred i sec que la Terra, i també hi ha volcans i tempestes de pols.</p>
+          <p>Els rovers són vehicles que exploren la superfície i envien dades a la Terra. El Curiosity, per exemple, estudia les roques del cràter Gale per saber com era Mart en el passat.</p>
+        </div>
+        <figure class="feature-image">
+          <img src="imatges/rover-mart.jpg" alt="Un rover de la NASA estudiant el sòl de Mart">
+          <figcaption>Un rover explora la superfície de Mart. Imatge: NASA/JPL-Caltech.</figcaption>
+        </figure>
+      </div>
 
-        <article>
-            <div class="column">
-                <h1>Temp. 5</h1>
-                <p>La fractura al cel va submergir l'illa en el caos, llançant alguns dels seus estimats punts de
-                    referència a les terres més enllà. Els que miren l'illa des de sota envien Enforcers per restablir
-                    l'equilibri tornant aquests objectes, fent que els mons xoquin. Trossos de terra s'hi filtren per
-                    accident, com ara sorra, víkings i golf, i més tard, el mal també ho fa, però amb propòsit.
-                </p> <br>
-            </div>
-            <div class="imatge">
-                <img src="imatges/cub.jpg" alt="cub">
-            </div>
-            <div class="segona_columna">
-                <br>Se'n va de viatge per carretera mentre descobreix l'illa i les moltes persones que hi van ser
-                arrastrades dels seus mons abans que ell. Amb cada segon del viatge per carretera de la tripulació, la
-                bretxa de dalt comença a reduir-se; fins que la foscor veu l'oportunitat.<br>
-            </div>
-        </article>
-    </section>
+      <!-- Dato sobre la duración del día y enlace a la siguiente página. -->
+      <div class="fact-card">
+        <h2>La durada d'un dia</h2>
+        <p>Un dia a Mart dura aproximadament 24 hores i 39 minuts. L'any marcià és més llarg que el terrestre: Mart triga 687 dies terrestres a completar una volta al Sol.</p>
+        <a class="text-link" href="temporada6.html">Continua llegint sobre Saturn &rarr;</a>
+      </div>
+      <p class="source-note">Més informació: <a href="https://science.nasa.gov/mars/" target="_blank" rel="noopener">Mart a la NASA</a>.</p>
+    </article>
+  </section>
 
-    <footer>
-        <p>by Naïm</p>
-    </footer>
+  <!-- Pie de página compartido por el sitio. -->
+  <footer>
+    <p>Fet per Naïm</p>
+  </footer>
 </body>
-
 </html>

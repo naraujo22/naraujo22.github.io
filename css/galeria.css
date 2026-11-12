@@ -1,26 +1,63 @@
-div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 15.9%;
+/* Texto de presentación de la galería */
+.gallery-heading {
+  margin-bottom: 28px;
+  max-width: 700px;
+}
+
+.gallery-heading h2 {
+  margin-bottom: 10px;
+}
+
+/* Reparte las imágenes en una cuadrícula */
+.gallery-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Estilo de cada fotografía y su pie */
+figure.gallery {
+  background: white;
+  border: 1px solid #ccc;
+  margin: 0;
+  overflow: hidden;
+}
+
+figure.gallery a {
+  display: block;
+}
+
+figure.gallery img {
+  aspect-ratio: 4 / 3;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+figure.gallery figcaption {
+  color: #222;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 14px 16px 16px;
+}
+
+figure.gallery figcaption span {
+  color: #555;
+  display: block;
+  font-size: 0.85rem;
+  font-weight: normal;
+  padding-top: 4px;
+}
+
+/* Reduce el número de columnas en pantallas medianas y móviles */
+@media screen and (max-width: 800px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
+}
+
+@media screen and (max-width: 520px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
   }
-  
-  div.gallery img {
-    width: 100%;
-    height: auto;
-  }
-  
-  div.desc {
-    padding: 15px;
-    text-align: center;
-  }
-  @media screen and (max-width: 600px){
-    div.desc{
-      text-align: left;
-      
-    }
-  }
+}
