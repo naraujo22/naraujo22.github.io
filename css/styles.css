@@ -108,6 +108,7 @@ article {
 .text-column h2,
 .gallery-heading h2,
 .planet-data h2,
+.myths-intro h2,
 .fact-card h2,
 .thank-you h2 {
   color: #182746;
@@ -215,6 +216,82 @@ figcaption {
 
 .source-note a {
   color: #61328c;
+}
+
+/* Targetes de mites: Flexbox les distribueix en columnes segons l'espai disponible. */
+.myths-article {
+  max-width: 1200px;
+}
+
+.myths-intro {
+  margin-bottom: 28px;
+  max-width: 700px;
+}
+
+.myth-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.myth-card {
+  background: white;
+  border-top: 4px solid #7542a5;
+  box-shadow: 0 3px 12px rgb(24 39 70 / 10%);
+  flex: 1 1 calc((100% - 40px) / 3);
+  min-width: min(100%, 280px);
+  padding: 24px;
+}
+
+.myth-card h2 {
+  color: #182746;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.myth-card p + p {
+  margin-top: 12px;
+}
+
+.myth-label,
+.reality-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-right: 5px;
+  text-transform: uppercase;
+}
+
+.myth-sources {
+  background: #e8e0ef;
+  margin-top: 40px;
+  padding: 24px;
+}
+
+.myth-sources h2 {
+  color: #182746;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.myth-sources ul {
+  padding-left: 22px;
+}
+
+.myth-sources li + li {
+  margin-top: 8px;
+}
+
+.myth-sources a {
+  color: #61328c;
+}
+
+.myth-label {
+  color: #7542a5;
+}
+
+.reality-label {
+  color: #246548;
 }
 
 /* Distribución y aspecto del formulario */
@@ -359,6 +436,10 @@ footer {
   nav li {
     flex: 1 1 33.333%;
     text-align: center;
+  }
+
+  .myth-card {
+    flex-basis: 100%;
   }
 
   nav a {
